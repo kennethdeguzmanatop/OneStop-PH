@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OneStop PH liquid glass monogram">
+  <defs>
+    <linearGradient id="base" x1="7" y1="4" x2="58" y2="62" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#173b70"/>
+      <stop offset=".52" stop-color="#10284f"/>
+      <stop offset="1" stop-color="#07172f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="14" y1="10" x2="51" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".72"/>
+      <stop offset=".22" stop-color="#b9efff" stop-opacity=".30"/>
+      <stop offset=".55" stop-color="#65bfff" stop-opacity=".12"/>
+      <stop offset=".82" stop-color="#d9f5ff" stop-opacity=".27"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".48"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="15" y1="13" x2="49" y2="51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".25" stop-color="#b9f1ff"/>
+      <stop offset=".58" stop-color="#72c9ff"/>
+      <stop offset=".82" stop-color="#d7f8ff"/>
+      <stop offset="1" stop-color="#8aaeff"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="22" y1="18" x2="43" y2="47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d5c91"/>
+      <stop offset="1" stop-color="#102744"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="0" cy="0" r="1" gradientTransform="matrix(22 22 -22 22 19 13)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+      <feOffset dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".34"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep midnight glass canvas -->
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#base)"/>
+  <rect x="2.7" y="2.7" width="58.6" height="58.6" rx="17.3"
+        fill="none" stroke="#b8eaff" stroke-opacity=".26" stroke-width="1.2"/>
+
+  <!-- Soft reflected light -->
+  <ellipse cx="24" cy="15" rx="25" ry="17" fill="url(#shine)" opacity=".56"/>
+
+  <!-- Floating translucent glass disc -->
+  <g filter="url(#shadow)">
+    <circle cx="32" cy="31" r="21.2" fill="url(#glass)"
+            stroke="#e6faff" stroke-opacity=".76" stroke-width="1.15"/>
+    <circle cx="32" cy="31" r="17.2" fill="url(#inner)"
+            stroke="#a9eaff" stroke-opacity=".34" stroke-width="1"/>
+    <!-- A custom flowing O ribbon: brand initial, not a map marker -->
+    <path d="M41.7 20.8c-2.6-2.4-5.9-3.7-9.7-3.7-8.1 0-14.1 6-14.1 14.1s6 14.1 14.1 14.1c3.9 0 7.3-1.5 9.9-4"
+          fill="none" stroke="url(#ring)" stroke-width="5.1" stroke-linecap="round"/>
+    <path d="M22.2 40.2c2.4 2.1 5.7 3.2 9.8 3.2 8.1 0 14.1-6 14.1-14.1 0-2.1-.4-4-1.2-5.7"
+          fill="none" stroke="#8bdcff" stroke-opacity=".68" stroke-width="2.1" stroke-linecap="round"/>
+    <!-- Small warm highlight, a subtle PH-inspired accent -->
+    <path d="M43.7 13.2 45 17l3.8 1.3-3.8 1.3-1.3 3.8-1.3-3.8-3.8-1.3 3.8-1.3Z"
+          fill="#ffe2a0"/>
+    <path d="M17.8 14.7c5.1-4.1 12.1-5.3 18.4-3.2"
+          fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tiny glass glint -->
+  <circle cx="49.5" cy="45.5" r="2.2" fill="#dffaff" fill-opacity=".9"/>
+  <circle cx="49.5" cy="45.5" r="4.5" fill="none" stroke="#dffaff" stroke-opacity=".22"/>
+</svg>
