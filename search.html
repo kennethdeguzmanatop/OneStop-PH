@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover food, entertainment, destinations, and experiences across the Philippines with OneStop PH.">
+
+    <title>Search Recommendations | OneStop PH</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="theme-color" content="#183b32">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="OneStop PH home">
+            <img src="assets/favicon.svg" alt="" class="brand-mark">
+            <span class="brand-word">OneStop</span>
+            <span class="brand-ph">PH</span>
+        </a>
+
+        <button
+            class="day-indicator"
+            id="themeToggle"
+            type="button"
+            aria-label="Change appearance mode"
+            aria-pressed="false"
+            title="Appearance: automatic"
+        >
+            <span class="day-icon" id="dayIcon" aria-hidden="true">◐</span>
+            <span class="day-label" id="dayLabel">Auto</span>
+        </button>
+
+        <div class="header-actions">
+            <form class="search-form" action="search.html" method="get">
+                <input
+                    type="search"
+                    name="q"
+                    autocomplete="off"
+                    placeholder="Search anything..."
+                    aria-label="Search recommendations"
+                >
+
+                <button type="submit" aria-label="Submit search">
+                    <svg
+                        class="search-submit-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <circle cx="10.8" cy="10.8" r="6.4"/>
+                        <path d="m15.5 15.5 4.2 4.2"/>
+                    </svg>
+                </button>
+            </form>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="search.html" class="active">Explore</a>
+            <a href="features.html">Features</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / Search
+        </div>
+
+        <section class="page-intro compact">
+            <p class="eyebrow">FIND YOUR NEXT FAVORITE</p>
+            <h1>Search <span>OneStop.</span></h1>
+            <p>
+                Search real Filipino destinations, food, films, music, games,
+                and cultural events. Most place listings focus on Nueva Ecija.
+            </p>
+        </section>
+
+        <div class="category-chips">
+            <a href="search.html">All Categories</a>
+            <a href="category.html">Foods</a>
+            <a href="search.html?cat=movies">Movies</a>
+            <a href="search.html?cat=series">TV Series</a>
+            <a href="search.html?cat=music">Music</a>
+            <a href="search.html?cat=games">Games</a>
+            <a href="search.html?cat=spots">Tourist Spots</a>
+            <a href="search.html?cat=events">Local Events</a>
+        </div>
+
+        <p class="result-count" id="searchSummary" aria-live="polite"></p>
+
+        <div class="card-grid listing-grid" id="searchResults">
+
+            <!-- 01. Hapag Vicenticos -->
+            <article
+                class="recommendation-card"
+                data-id="hapag-vicenticos"
+                data-name="Hapag Vicenticos"
+                data-category="food"
+                data-keywords="restaurant Filipino food Cabanatuan Nueva Ecija dining"
+            >
+                <div class="visual visual-food">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/Vicenticos.jpg"
+                        alt="Hapag Vicenticos restaurant facade and dining area"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>01</span>
+                    <small>LOCAL RESTAURANT</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">LOCAL RESTAURANT</p>
+                    <h3>Hapag Vicenticos</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A well-known restaurant in Cabanatuan serving Filipino
+                        dishes and local favorites. The Nueva Ecija provincial
+                        tourism site includes Hapag Vicenticos among the
+                        province’s tourism and food establishments.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=hapag-vicenticos">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 02. Cabanatuan Garlic Longganisa -->
+            <article
+                class="recommendation-card"
+                data-id="cabanatuan-longganisa"
+                data-name="Cabanatuan Garlic Longganisa"
+                data-category="food"
+                data-keywords="longganisa garlic sausage local food Cabanatuan Nueva Ecija"
+            >
+                <div class="visual visual-food">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/cabanatuan_longanisa.jpg"
+                        alt="Cabanatuan garlic longganisa at a local market"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>02</span>
+                    <small>LOCAL FOOD</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">LOCAL FOOD</p>
+                    <h3>Cabanatuan Garlic Longganisa</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        Cabanatuan is known for its garlic longganisa.
+                        Nueva Ecija’s provincial tourism office also
+                        identifies Cabanatuan longganisa as one of the
+                        province’s local food products.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=cabanatuan-longganisa">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 03. Maria’s Kitchen -->
+            <article
+                class="recommendation-card"
+                data-id="marias-kitchen"
+                data-name="Maria’s Kitchen"
+                data-category="food"
+                data-keywords="restaurant Filipino Korean Western pizza General Tinio"
+            >
+                <div class="visual visual-food">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/marias_kitchen.jpg"
+                        alt="Filipino food from Nueva Ecija; illustrative food photograph"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>03</span>
+                    <small>LOCAL RESTAURANT</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">LOCAL RESTAURANT</p>
+                    <h3>Maria’s Kitchen</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        The official General Tinio tourism page lists
+                        Maria’s Kitchen as a dining establishment in
+                        Barangay Padolina, serving Filipino, Korean,
+                        Western dishes, and pizza.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=marias-kitchen">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 04. Heneral Luna -->
+            <article
+                class="recommendation-card"
+                data-id="heneral-luna"
+                data-name="Heneral Luna (2015)"
+                data-category="movies"
+                data-keywords="movie film historical action Jerrold Tarog John Arcilla TBA Studios"
+            >
+                <div class="visual visual-film">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/heneral_luna.webp"
+                        alt="Heneral Luna film poster"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>04</span>
+                    <small>FILIPINO FILM</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">FILIPINO FILM</p>
+                    <h3>Heneral Luna (2015)</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A Philippine historical action film directed by
+                        Jerrold Tarog. It follows General Antonio Luna
+                        during the Philippine-American War and explores
+                        the divisions within the revolutionary government.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=heneral-luna">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 05. Goyo: Ang Batang Heneral -->
+            <article
+                class="recommendation-card"
+                data-id="goyo-ang-batang-heneral"
+                data-name="Goyo: Ang Batang Heneral (2018)"
+                data-category="movies"
+                data-keywords="movie film historical drama Paulo Avelino Jerrold Tarog"
+            >
+                <div class="visual visual-film">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/goyo_ang_batang_heneral.jpg"
+                        alt="Goyo Ang Batang Heneral film poster"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>05</span>
+                    <small>FILIPINO FILM</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">FILIPINO FILM</p>
+                    <h3>Goyo: Ang Batang Heneral (2018)</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A Filipino historical drama directed by Jerrold
+                        Tarog about Gregorio del Pilar. It is the follow-up
+                        to Heneral Luna and was announced for nationwide
+                        screening by TBA Studios in 2018.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=goyo-ang-batang-heneral">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 06. Maria Clara at Ibarra -->
+            <article
+                class="recommendation-card"
+                data-id="maria-clara-at-ibarra"
+                data-name="Maria Clara at Ibarra"
+                data-category="series"
+                data-keywords="GMA television series historical drama Barbie Forteza Dennis Trillo"
+            >
+                <div class="visual visual-film">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/mariaclara_ibarra.png"
+                        alt="Maria Clara at Ibarra promotional image"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>06</span>
+                    <small>FILIPINO TV SERIES</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">FILIPINO TV SERIES</p>
+                    <h3>Maria Clara at Ibarra</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A GMA historical fantasy-drama series inspired by
+                        José Rizal’s Noli Me Tangere and El Filibusterismo.
+                        The series features characters from the novels
+                        and a modern-day perspective on Philippine history.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=maria-clara-at-ibarra">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 07. IV of Spades -->
+            <article
+                class="recommendation-card"
+                data-id="iv-of-spades"
+                data-name="IV of Spades"
+                data-category="music"
+                data-keywords="OPM Filipino band pop rock Mundo Aura Andalucia"
+            >
+                <div class="visual visual-music">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/IV_of_Spades.jpeg"
+                        alt="IV of Spades band members"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>07</span>
+                    <small>OPM BAND</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">OPM BAND</p>
+                    <h3>IV of Spades</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        IV of Spades is a Filipino pop-rock band known for
+                        songs such as “Mundo.” GMA News reported the group’s
+                        return and releases in 2025–2026.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=iv-of-spades">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 08. Patintero -->
+            <article
+                class="recommendation-card"
+                data-id="patintero"
+                data-name="Patintero"
+                data-category="games"
+                data-keywords="traditional Filipino game larong pinoy street game"
+            >
+                <div class="visual visual-event">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/Patintero.jpg"
+                        alt="Young people playing patintero on a marked court"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>08</span>
+                    <small>TRADITIONAL FILIPINO GAME</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">TRADITIONAL FILIPINO GAME</p>
+                    <h3>Patintero</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        Patintero is a traditional Filipino team game played
+                        on a marked rectangular court. Players try to cross
+                        the lines while avoiding the opposing team. The
+                        National Commission for Culture and the Arts
+                        documents the game as part of Filipino play culture.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=patintero">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 09. Sungka -->
+            <article
+                class="recommendation-card"
+                data-id="sungka"
+                data-name="Sungka"
+                data-category="games"
+                data-keywords="sungka board game traditional Filipino culture"
+            >
+                <div class="visual visual-music">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/sungka.jpg"
+                        alt="Traditional wooden sungka board with shells"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>09</span>
+                    <small>TRADITIONAL FILIPINO GAME</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">TRADITIONAL FILIPINO GAME</p>
+                    <h3>Sungka</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        Sungka is a two-player traditional board game using
+                        a wooden board with fourteen small pits and two
+                        larger home pits. The National Museum of the
+                        Philippines includes sungka in its ethnology
+                        collection on games and recreation.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=sungka">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 10. Minalungao National Park -->
+            <article
+                class="recommendation-card"
+                data-id="minalungao-national-park"
+                data-name="Minalungao National Park"
+                data-category="spots"
+                data-keywords="Minalungao river limestone eco tourism Nueva Ecija General Tinio"
+            >
+                <div class="visual visual-travel">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/minalungaonationalpark.jpg"
+                        alt="Minalungao National Park river between limestone cliffs"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>10</span>
+                    <small>NATURE DESTINATION</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">NATURE DESTINATION</p>
+                    <h3>Minalungao National Park</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A protected natural destination known for its green
+                        river and limestone formations. The park was
+                        established through Republic Act No. 5100 in 1967
+                        and is promoted by Nueva Ecija and General Tinio
+                        tourism offices.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=minalungao-national-park">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 11. Pantabangan Lake -->
+            <article
+                class="recommendation-card"
+                data-id="pantabangan-lake"
+                data-name="Pantabangan Lake"
+                data-category="spots"
+                data-keywords="Pantabangan Lake dam reservoir mountain Nueva Ecija"
+            >
+                <div class="visual visual-travel">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/pantabangan.jpg"
+                        alt="Pantabangan Lake with floating raft houses"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>11</span>
+                    <small>NATURE DESTINATION</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">NATURE DESTINATION</p>
+                    <h3>Pantabangan Lake</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A major lake and outdoor destination in Nueva Ecija.
+                        The provincial tourism office features Pantabangan
+                        Dam and the lake among the province’s adventure
+                        destinations.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=pantabangan-lake">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 12. Gabaldon Falls -->
+            <article
+                class="recommendation-card"
+                data-id="gabaldon-falls"
+                data-name="Gabaldon Falls"
+                data-category="spots"
+                data-keywords="waterfall Gabaldon Nueva Ecija Mt Mingan nature"
+            >
+                <div class="visual visual-travel">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/gabaldonfalls.webp"
+                        alt="Gabaldon Falls surrounded by tropical vegetation"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>12</span>
+                    <small>NATURE DESTINATION</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">NATURE DESTINATION</p>
+                    <h3>Gabaldon Falls</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A waterfall destination near Mt. Mingan, surrounded
+                        by boulders and vegetation. It is listed among
+                        Nueva Ecija’s tourism destinations. Check local
+                        conditions before travelling.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=gabaldon-falls">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 13. Pangatian Memorial Shrine -->
+            <article
+                class="recommendation-card"
+                data-id="camp-pangatian-shrine"
+                data-name="Pangatian Memorial Shrine"
+                data-category="spots"
+                data-keywords="Pangatian shrine memorial historical site Cabanatuan WWII"
+            >
+                <div class="visual visual-travel">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/camppangatiancabanatuannuevaecija.jpg"
+                        alt="Camp Pangatian memorial shrine in Cabanatuan"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>13</span>
+                    <small>HISTORICAL SITE</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">HISTORICAL SITE</p>
+                    <h3>Pangatian Memorial Shrine</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A memorial site in Cabanatuan associated with the
+                        1945 raid that liberated Allied prisoners of war.
+                        It is included in Nueva Ecija’s official tourism
+                        destinations.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=camp-pangatian-shrine">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 14. Sibuyas Festival -->
+            <article
+                class="recommendation-card"
+                data-id="sibuyas-festival"
+                data-name="Sibuyas Festival"
+                data-category="events"
+                data-keywords="Sibuyas Festival Bongabon onion Nueva Ecija parade"
+            >
+                <div class="visual visual-event">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/onioninspiredpropduringthestreetparadephotobyEdgarAllanMSembrano.jpg"
+                        alt="Sibuyas Festival street parade in Bongabon"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>14</span>
+                    <small>ANNUAL LOCAL FESTIVAL</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">ANNUAL LOCAL FESTIVAL</p>
+                    <h3>Sibuyas Festival</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A community celebration in Bongabon that highlights
+                        the town’s onion-growing industry and local identity.
+                        The festival is listed by the Nueva Ecija provincial
+                        tourism office among the province’s town celebrations.
+                        Dates and activities vary by year.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=sibuyas-festival">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+            <!-- 15. Taong Putik Festival -->
+            <article
+                class="recommendation-card"
+                data-id="taong-putik-festival"
+                data-name="Taong Putik Festival"
+                data-category="events"
+                data-keywords="Taong Putik Festival Aliaga San Juan Bautista Nueva Ecija"
+            >
+                <div class="visual visual-event">
+                    <img
+                        class="card-image"
+                        src="assets/images/recommendations/taong_putik.jpg"
+                        alt="Devotee taking part in the Taong Putik Festival in Aliaga, Nueva Ecija"
+                        loading="lazy"
+                        referrerpolicy="no-referrer"
+                    >
+                    <span>15</span>
+                    <small>CULTURAL FESTIVAL</small>
+                </div>
+
+                <div class="card-body">
+                    <p class="tag">CULTURAL FESTIVAL</p>
+                    <h3>Taong Putik Festival</h3>
+
+                    <div class="rating">
+                        <strong>Philippines · Verified reference</strong>
+                    </div>
+
+                    <p>
+                        A religious and cultural tradition in Aliaga,
+                        Nueva Ecija, also known as the Feast of San Juan
+                        Bautista. It is recognized in the provincial tourism
+                        office’s listing of faith-related festivals. Check
+                        the municipal announcements for current program details.
+                    </p>
+
+                    <a class="text-link" href="detail.html?id=taong-putik-festival">
+                        View details →
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="empty-state" id="noSearchResults" hidden>
+            No search results found. Try another keyword or category.
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html" class="logo">
+            <span class="brand-word">OneStop</span>
+            <span class="brand-ph">PH</span>
+        </a>
+
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+
+        <p>© 2026 OneStop PH. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

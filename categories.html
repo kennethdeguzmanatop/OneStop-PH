@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse OneStop PH categories.">
+
+    <title>Categories | OneStop PH</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="theme-color" content="#183b32">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="OneStop PH home">
+            <img src="assets/favicon.svg" alt="" class="brand-mark">
+            <span class="brand-word">OneStop</span>
+            <span class="brand-ph">PH</span>
+        </a>
+
+        <button
+            class="day-indicator"
+            id="themeToggle"
+            type="button"
+            aria-label="Change appearance mode"
+            aria-pressed="false"
+            title="Appearance: automatic"
+        >
+            <span class="day-icon" id="dayIcon" aria-hidden="true">◐</span>
+            <span class="day-label" id="dayLabel">Auto</span>
+        </button>
+
+        <div class="header-actions">
+            <form class="search-form" action="search.html" method="get">
+                <input
+                    type="search"
+                    name="q"
+                    autocomplete="off"
+                    placeholder="Search anything..."
+                    aria-label="Search recommendations"
+                >
+
+                <button type="submit" aria-label="Submit search">
+                    <svg
+                        class="search-submit-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <circle cx="10.8" cy="10.8" r="6.4"/>
+                        <path d="m15.5 15.5 4.2 4.2"/>
+                    </svg>
+                </button>
+            </form>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="search.html">Explore</a>
+            <a href="features.html">Features</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / Categories
+        </div>
+
+        <section class="page-intro compact">
+            <p class="eyebrow">EXPLORE BY INTEREST</p>
+
+            <h1>
+                Find your <span>category.</span>
+            </h1>
+
+            <p>
+                Choose what you are in the mood for. Each category has its own
+                collection of recommendations.
+            </p>
+        </section>
+
+        <section class="category-hub" aria-label="All categories">
+            <a class="category-tile category-food" href="category.html">
+                <img
+                    src="assets/images/recommendations/cabanatuan_longanisa.jpg"
+                    alt="Food category"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                >
+
+                <span class="tile-icon">🍜</span>
+                <strong>Foods</strong>
+                <small>Restaurants, cafés, and local food finds.</small>
+                <span class="tile-arrow">Explore category ↗</span>
+            </a>
+
+            <a class="category-tile category-movies" href="search.html?cat=movies">
+                <img
+                    src="assets/images/recommendations/heneral_luna.webp"
+                    alt="Movies category"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                >
+
+                <span class="tile-icon">🎬</span>
+                <strong>Movies</strong>
+                <small>Filipino films and movie recommendations.</small>
+                <span class="tile-arrow">Explore category ↗</span>
+            </a>
+
+            <a class="category-tile category-series" href="search.html?cat=series">
+                <img
+                    src="assets/images/recommendations/mariaclara_ibarra.png"
+                    alt="Series category"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                >
+
+                <span class="tile-icon">📺</span>
+                <strong>TV Series</strong>
+                <small>Series to add to your watchlist.</small>
+                <span class="tile-arrow">Explore category ↗</span>
+            </a>
+
+            <a class="category-tile category-music" href="search.html?cat=music">
+                <img
+                    src="assets/images/recommendations/IV_of_Spades.jpeg"
+                    alt="Music category"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                >
+
+                <span class="tile-icon">🎧</span>
+                <strong>Music</strong>
+                <small>Local artists, songs, and playlists.</small>
+                <span class="tile-arrow">Explore category ↗</span>
+            </a>
+
+            <a class="category-tile category-games" href="search.html?cat=games">
+                <img
+                    src="assets/images/recommendations/Patintero.jpg"
+                    alt="Games category"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                >
+
+                <span class="tile-icon">🎮</span>
+                <strong>Games</strong>
+                <small>Games and gaming communities.</small>
+                <span class="tile-arrow">Explore category ↗</span>
+            </a>
+
+            <a class="category-tile category-spots" href="search.html?cat=spots">
+                <img
+                    src="assets/images/recommendations/minalungaonationalpark.jpg"
+                    alt="Spots category"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                >
+
+                <span class="tile-icon">🏝️</span>
+                <strong>Tourist Spots</strong>
+                <small>Places and destinations around the Philippines.</small>
+                <span class="tile-arrow">Explore category ↗</span>
+            </a>
+
+            <a class="category-tile category-events" href="search.html?cat=events">
+                <img
+                    src="assets/images/recommendations/onioninspiredpropduringthestreetparadephotobyEdgarAllanMSembrano.jpg"
+                    alt="Events category"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                >
+
+                <span class="tile-icon">🎪</span>
+                <strong>Local Events</strong>
+                <small>Community events and things to do.</small>
+                <span class="tile-arrow">Explore category ↗</span>
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html" class="logo">
+            <span class="brand-word">OneStop</span>
+            <span class="brand-ph">PH</span>
+        </a>
+
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+
+        <p>© 2026 OneStop PH. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

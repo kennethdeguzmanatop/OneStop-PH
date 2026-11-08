@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover food, entertainment, destinations, and experiences across the Philippines with OneStop PH.">
+
+    <title>Interactive Features | OneStop PH</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="theme-color" content="#183b32">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="OneStop PH home">
+            <img src="assets/favicon.svg" alt="" class="brand-mark">
+            <span class="brand-word">OneStop</span>
+            <span class="brand-ph">PH</span>
+        </a>
+
+        <button
+            class="day-indicator"
+            id="themeToggle"
+            type="button"
+            aria-label="Change appearance mode"
+            aria-pressed="false"
+            title="Appearance: automatic"
+        >
+            <span class="day-icon" id="dayIcon" aria-hidden="true">◐</span>
+            <span class="day-label" id="dayLabel">Auto</span>
+        </button>
+
+        <div class="header-actions">
+            <form class="search-form" action="search.html" method="get">
+                <input
+                    type="search"
+                    name="q"
+                    autocomplete="off"
+                    placeholder="Search anything..."
+                    aria-label="Search recommendations"
+                >
+
+                <button type="submit" aria-label="Submit search">
+                    <svg
+                        class="search-submit-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <circle cx="10.8" cy="10.8" r="6.4"/>
+                        <path d="m15.5 15.5 4.2 4.2"/>
+                    </svg>
+                </button>
+            </form>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="search.html">Explore</a>
+            <a href="features.html" class="active">Features</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / Interactive Features
+        </div>
+
+        <section class="page-intro compact">
+            <p class="eyebrow">EXPLORE THE TOOLKIT</p>
+            <h1>
+                Compare, share,<br>
+                <span>and interact.</span>
+            </h1>
+            <p>
+                Explore useful tools for discovering and submitting recommendations.
+            </p>
+        </section>
+
+        <section class="feature-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">01 / COMPARISON</p>
+                    <h2>Compare recommendations.</h2>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table class="comparison-table">
+                    <caption>Sample recommendation comparison</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Category</th>
+                            <th scope="col">Recommendation</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Budget</th>
+                            <th scope="col">Rating</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2">Food</th>
+                            <td>Heneral's Kitchen</td>
+                            <td>Philippines</td>
+                            <td>₱₱</td>
+                            <td>4.8 / 5</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cordillera Brews</td>
+                            <td>North Luzon</td>
+                            <td>₱</td>
+                            <td>4.6 / 5</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Places</th>
+                            <td>Hidden Paradise Cove</td>
+                            <td>Philippines</td>
+                            <td>₱₱₱</td>
+                            <td>4.9 / 5</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Sample entries for demonstration</td>
+                            <td colspan="2">Ratings are illustrative</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">02 / SUBMIT</p>
+                    <h2>Suggest a recommendation.</h2>
+                </div>
+            </div>
+
+            <form class="content-panel form-card" id="recommendationForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="recName">
+                            Recommendation name <span>*</span>
+                        </label>
+                        <input
+                            id="recName"
+                            name="recName"
+                            type="text"
+                            minlength="2"
+                            maxlength="80"
+                            placeholder="e.g. A local café"
+                            required
+                        >
+                        <small class="field-error" id="recNameError"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="recCategory">
+                            Category <span>*</span>
+                        </label>
+                        <select id="recCategory" name="recCategory" required>
+                            <option value="">Select category</option>
+                            <option>Food & Restaurants</option>
+                            <option>Movies</option>
+                            <option>TV Series</option>
+                            <option>Music</option>
+                            <option>Games</option>
+                            <option>Tourist Spots</option>
+                            <option>Local Events</option>
+                        </select>
+                        <small class="field-error" id="recCategoryError"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="recLocation">
+                            Location <span>*</span>
+                        </label>
+                        <input
+                            id="recLocation"
+                            name="recLocation"
+                            type="text"
+                            minlength="2"
+                            placeholder="City or province"
+                            required
+                        >
+                        <small class="field-error" id="recLocationError"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="recEmail">
+                            Your email <span>*</span>
+                        </label>
+                        <input
+                            id="recEmail"
+                            name="recEmail"
+                            type="email"
+                            placeholder="name@example.com"
+                            required
+                        >
+                        <small class="field-error" id="recEmailError"></small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="recWebsite">Website or social link</label>
+                        <input
+                            id="recWebsite"
+                            name="recWebsite"
+                            type="url"
+                            placeholder="https://example.com"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="recBudget">Estimated budget (₱)</label>
+                        <input
+                            id="recBudget"
+                            name="recBudget"
+                            type="number"
+                            min="0"
+                            step="1"
+                            placeholder="Optional"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="recDescription">
+                        Why do you recommend it? <span>*</span>
+                    </label>
+                    <textarea
+                        id="recDescription"
+                        name="recDescription"
+                        rows="4"
+                        minlength="15"
+                        maxlength="400"
+                        placeholder="Tell us what makes it worth discovering..."
+                        required
+                    ></textarea>
+                    <small class="field-error" id="recDescriptionError"></small>
+                </div>
+
+                <label class="check-field">
+                    <input type="checkbox" id="confirmInfo" required>
+                    I confirm that the information I provided is accurate.
+                </label>
+
+                <small class="field-error" id="confirmInfoError"></small>
+
+                <button class="button button-dark" type="submit">
+                    Submit suggestion →
+                </button>
+
+                <p
+                    class="form-status"
+                    id="recommendationStatus"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+            </form>
+        </section>
+
+        <section class="feature-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">03 / TRY IT</p>
+                    <h2>A little interaction.</h2>
+                </div>
+            </div>
+
+            <div class="interaction-grid">
+                <div class="content-panel interaction-card">
+                    <p class="tag">LIVE GREETING</p>
+                    <h3 id="greetingOutput">Welcome to OneStop PH.</h3>
+                    <p id="timeOutput" class="muted-copy">
+                        Your local time will appear here.
+                    </p>
+                    <button
+                        class="button button-outline"
+                        id="greetingButton"
+                        type="button"
+                    >
+                        Update greeting
+                    </button>
+                </div>
+
+                <div class="content-panel interaction-card">
+                    <p class="tag">DOM PLAYGROUND</p>
+                    <h3>My discovery list</h3>
+
+                    <form id="itemForm" class="inline-form">
+                        <input
+                            id="itemInput"
+                            type="text"
+                            maxlength="40"
+                            placeholder="Add a place or idea"
+                            aria-label="New discovery"
+                        >
+                        <button class="button button-dark" type="submit">
+                            Add
+                        </button>
+                    </form>
+
+                    <ul id="discoveryList" class="discovery-list">
+                        <li>
+                            <span>Try a local café</span>
+                            <button
+                                type="button"
+                                class="remove-item"
+                                aria-label="Remove item"
+                            >
+                                ×
+                            </button>
+                        </li>
+
+                        <li>
+                            <span>Explore a new destination</span>
+                            <button
+                                type="button"
+                                class="remove-item"
+                                aria-label="Remove item"
+                            >
+                                ×
+                            </button>
+                        </li>
+                    </ul>
+
+                    <p class="small-note">
+                        Add an item, then remove it using ×.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html" class="logo">
+            <span class="brand-word">OneStop</span>
+            <span class="brand-ph">PH</span>
+        </a>
+
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+
+        <p>© 2026 OneStop PH. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/emailjs-config.js" defer></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

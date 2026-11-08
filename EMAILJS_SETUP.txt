@@ -1,0 +1,33 @@
+OneStop PH — EmailJS configuration
+
+ADMIN NOTIFICATIONS (existing setup)
+- Public Key: JelVpAiMRD4QvelBv
+- Service ID: kennethdeguzmanatop
+- Contact Template ID: onestopph
+- Recommendation Template ID: onestopphrecommendation
+- Admin recipient: kennethdeguzmanatop13@gmail.com
+
+VISITOR AUTO-REPLIES (new setup)
+- Public Key: 7CMFk3bLec7yTE7oV
+- Service ID: onestopphautoreply
+- Contact Auto-Reply Template ID: onestopphauto
+- Recommendation Auto-Reply Template ID: onestopphauto1
+- Reply-To address configured in EmailJS: leviackermancaptainrivai.han@gmail.com
+
+CONTACT FORM VARIABLES
+- Admin notification: to_email, from_name, reply_to, topic, message
+- Auto-reply: uses the same variables; set Auto-Reply template To Email to {{reply_to}}.
+
+RECOMMENDATION FORM VARIABLES
+- Admin notification and auto-reply: to_email, recommendation_name, category,
+  location, sender_email, website, budget, description, reply_to
+- Set Recommendation Auto-Reply template To Email to {{sender_email}}.
+
+The website sends the admin notification first, then sends the matching
+visitor auto-reply using the separate auto-reply service and template.
+If the auto-reply fails, the admin submission is still treated as successful.
+
+Before publishing, confirm each EmailJS template's variable names and recipient
+settings, restrict allowed domains, enable available anti-spam protections,
+and test both forms using an email address you can access. No live test email
+has been sent from this update.
