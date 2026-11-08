@@ -1,0 +1,158 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Forest green glass background -->
+    <linearGradient id="bg" x1="65" y1="35" x2="455" y2="490" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#416653"/>
+      <stop offset=".35" stop-color="#234A39"/>
+      <stop offset=".72" stop-color="#15382D"/>
+      <stop offset="1" stop-color="#0D2922"/>
+    </linearGradient>
+
+    <linearGradient id="frame" x1="75" y1="55" x2="438" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B9CFC0"/>
+      <stop offset=".35" stop-color="#557C65"/>
+      <stop offset=".75" stop-color="#173D32"/>
+      <stop offset="1" stop-color="#A8BDAA"/>
+    </linearGradient>
+
+    <!-- Main O glass -->
+    <linearGradient id="ring" x1="155" y1="145" x2="375" y2="382" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF5"/>
+      <stop offset=".2" stop-color="#E8E6D8"/>
+      <stop offset=".48" stop-color="#C5D7C8"/>
+      <stop offset=".75" stop-color="#A4C1AC"/>
+      <stop offset="1" stop-color="#F6EBDD"/>
+    </linearGradient>
+
+    <linearGradient id="ringSide" x1="180" y1="155" x2="390" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDFBF0"/>
+      <stop offset=".5" stop-color="#A9C6B3"/>
+      <stop offset="1" stop-color="#547D64"/>
+    </linearGradient>
+
+    <linearGradient id="inner" x1="190" y1="160" x2="365" y2="375" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#315C46"/>
+      <stop offset=".5" stop-color="#173D32"/>
+      <stop offset="1" stop-color="#102B24"/>
+    </linearGradient>
+
+    <!-- Champagne accent -->
+    <linearGradient id="gold" x1="125" y1="100" x2="390" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4DAB5"/>
+      <stop offset=".5" stop-color="#C69B70"/>
+      <stop offset="1" stop-color="#E8C9A0"/>
+    </linearGradient>
+
+    <linearGradient id="shine" x1="90" y1="60" x2="340" y2="290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="reflection" cx="0" cy="0" r="1" gradientTransform="translate(150 105) rotate(49) scale(340)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="shadow" x="35" y="35" width="442" height="450" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="17"/>
+    </filter>
+
+    <filter id="bubbleShadow" x="350" y="365" width="115" height="115" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <clipPath id="iconClip">
+      <rect x="24" y="24" width="464" height="464" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#iconClip)">
+    <!-- Background -->
+    <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bg)"/>
+    <rect x="24" y="24" width="464" height="464" fill="url(#reflection)"/>
+
+    <!-- Background glass reflections -->
+    <path d="M24 150C105 45 235 18 354 48C418 64 463 111 488 155V24H24V150Z"
+          fill="url(#shine)" opacity=".6"/>
+    <path d="M-10 335C80 265 133 289 220 327C321 371 413 349 522 278V530H-10V335Z"
+          fill="#FFFFFF" opacity=".035"/>
+
+    <!-- Outer frame -->
+    <rect x="29" y="29" width="454" height="454" rx="108"
+          stroke="url(#frame)" stroke-width="10"/>
+    <rect x="40" y="40" width="432" height="432" rx="98"
+          stroke="#FFFFFF" stroke-opacity=".13" stroke-width="2"/>
+
+    <!-- Main O shadow -->
+    <ellipse cx="256" cy="274" rx="171" ry="180"
+             fill="#071D17" opacity=".48" filter="url(#shadow)"/>
+
+    <!-- Outer transparent orbital glass -->
+    <circle cx="256" cy="260" r="160"
+            stroke="#E9F0E8" stroke-opacity=".45" stroke-width="15"/>
+    <circle cx="256" cy="260" r="160"
+            stroke="url(#ring)" stroke-opacity=".55" stroke-width="5"/>
+    <circle cx="256" cy="260" r="145"
+            stroke="#FFFFFF" stroke-opacity=".13" stroke-width="2"/>
+
+    <!-- Main O body -->
+    <path d="M256 137
+      C328 137 381 190 381 260
+      C381 331 328 384 256 384
+      C184 384 131 331 131 260
+      C131 190 184 137 256 137Z
+      M256 177
+      C207 177 171 212 171 260
+      C171 309 207 344 256 344
+      C305 344 341 309 341 260
+      C341 212 305 177 256 177Z"
+      fill="url(#ring)" fill-rule="evenodd"/>
+
+    <!-- O edge definition -->
+    <path d="M256 137C328 137 381 190 381 260C381 331 328 384 256 384C184 384 131 331 131 260C131 190 184 137 256 137Z"
+          stroke="#FFFFFF" stroke-opacity=".72" stroke-width="5"/>
+    <path d="M256 177C207 177 171 212 171 260C171 309 207 344 256 344C305 344 341 309 341 260C341 212 305 177 256 177Z"
+          stroke="#7C9D85" stroke-opacity=".8" stroke-width="5"/>
+
+    <!-- Inner depth -->
+    <path d="M256 187C299 187 331 217 331 260C331 303 299 334 256 334C213 334 181 303 181 260C181 217 213 187 256 187Z"
+          fill="url(#inner)" opacity=".96"/>
+
+    <!-- Curved liquid highlight -->
+    <path d="M142 218C153 169 192 139 242 136"
+          stroke="#FFFFFF" stroke-opacity=".82" stroke-width="13"
+          stroke-linecap="round"/>
+    <path d="M157 177C174 149 202 133 231 130"
+          stroke="#FFFFFF" stroke-opacity=".35" stroke-width="5"
+          stroke-linecap="round"/>
+
+    <path d="M344 305C333 348 302 374 263 381"
+          stroke="#FFFFFF" stroke-opacity=".5" stroke-width="10"
+          stroke-linecap="round"/>
+
+    <!-- Delicate champagne edge -->
+    <path d="M377 221C383 240 384 259 380 278"
+          stroke="url(#gold)" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+
+    <!-- Floating glass bubble -->
+    <circle cx="394" cy="356" r="35"
+            fill="#FFFFFF" opacity=".09" filter="url(#bubbleShadow)"/>
+    <circle cx="394" cy="356" r="27"
+            fill="#DCE9DA" fill-opacity=".17"
+            stroke="#F7F5E9" stroke-opacity=".68" stroke-width="5"/>
+    <circle cx="394" cy="356" r="17"
+            fill="#E9F1E6" fill-opacity=".8"/>
+    <path d="M382 342C388 333 400 330 408 336"
+          stroke="#FFFFFF" stroke-opacity=".8" stroke-width="4"
+          stroke-linecap="round"/>
+
+    <!-- Final glass highlights -->
+    <path d="M66 118C83 85 111 63 145 55"
+          stroke="#FFFFFF" stroke-opacity=".34" stroke-width="4"
+          stroke-linecap="round"/>
+    <path d="M376 443C411 428 437 401 450 369"
+          stroke="#FFFFFF" stroke-opacity=".12" stroke-width="3"
+          stroke-linecap="round"/>
+  </g>
+</svg>
